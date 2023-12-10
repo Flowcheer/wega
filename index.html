@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="WEGA"/>
+    <meta property="og:url" content="https://flowcheer.github.io/wega/"/>
+    <meta property="og:image" content="https://flowcheer.github.io/wega/wegas/wega0.webp"/>
+    <meta property="og:description" content="wega wega"/>
+    <meta property="description" content="wega wega"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="wega.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>wega</title>
+</head>
+<body style="background-color: black;">
+    <div></div>
+    <center><img id="wega" src="wegas/wega0.webp" height="400" width="300" onclick=wega() alt="d"></center>
+    <h3 class="counter-display">You wega (..)</h1>
+    <!--i think its obvious that this website is a joke and should not be taken seriously, also explains some lazy coding-->>
+</body>
+<script>
+    let counterDisplayElem = document.querySelector('.counter-display');
+    let count = 0
+    function updateDisplay(){
+        counterDisplayElem.innerHTML = `You wega ${count}`;
+    };
+    $("#wega").css("animation", "")
+    function wega(){
+        var image = document.getElementById("wega");
+        var images = Array("wegas/wega0.webp","wegas/wega1.png", "wegas/OIG.png", "wegas/leegee.png","wegas/wegashoe.png")
+        var pickedimage = images[Math.floor(Math.random() * images.length)]
+        image.src = pickedimage
+        let weaudio = new Audio("screams/wega.mp3")
+        if(pickedimage == "wegas/leegee.png"){ weaudio = new Audio("screams/leegee.mp3")}
+        count++;
+        weaudio.play()
+        updateDisplay();
+        console.log(count)
+        $("#wega").css("animation","shake 0.5s linear infinite")
+    }
+    setInterval(wega, 10000)
+</script>
+</html>
