@@ -20,27 +20,5 @@
     <p>mighty eagle reached 10000 congratation</p>
     <!--i think its obvious that this website is a joke and should not be taken seriously, also explains some lazy coding-->>
 </body>
-<script>
-    let counterDisplayElem = document.querySelector('.counter-display');
-    let count = 0
-    function updateDisplay(){
-        counterDisplayElem.innerHTML = `You wega ${count}`;
-        document.title = `wega - ${count}`
-    };
-    $("#wega").css("animation", "")
-    function wega(){
-        var image = document.getElementById("wega");
-        var images = Array("wegas/wega0.webp","wegas/wega1.png", "wegas/OIG.png", "wegas/leegee.png","wegas/wegashoe.png")
-        var pickedimage = images[Math.floor(Math.random() * images.length)]
-        image.src = pickedimage
-        let weaudio = new Audio("screams/wega.mp3")
-        if(pickedimage == "wegas/leegee.png"){ weaudio = new Audio("screams/leegee.mp3")}
-        count++;
-        weaudio.play()
-        updateDisplay();
-        console.log(count)
-        $("#wega").css("animation","shake 0.5s linear infinite")
-    }
-    setInterval(wega, 10000)
-</script>
+<script src="wega.js"></script>
 </html>
