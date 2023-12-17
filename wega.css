@@ -10,14 +10,23 @@
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+}
+#wega{
+  transition: transform .2s;
+}
 #wega:active{
     animation: shake 0.5s linear infinite;
+    transform: scale(3);
 }
+
 h3{
   color:white;
   font-family: sans-serif;
+  transition: transform .2s;
   text-align:center;
+}
+h3:hover{
+  transform: scale(1.5);
 }
 p{
   color:gray;

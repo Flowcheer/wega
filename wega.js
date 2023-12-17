@@ -9,10 +9,12 @@ let counterDisplayElem = document.querySelector('.counter-display');
     $("#wega").css("animation", "")
     function wega(){
         var image = document.getElementById("wega");
-        var images = Array("wegas/wega0.webp","wegas/wega1.png", "wegas/OIG.png", "wegas/leegee.png","wegas/wegashoe.png")
+        var images = Array("wegas/wega0.webp","wegas/wega1.png", "wegas/OIG.png", "wegas/leegee.png","wegas/wegashoe.png", "wegas/wga.png","wegas/wega3.png","wegas/wega4.png")
         var pickedimage = images[Math.floor(Math.random() * images.length)]
         image.src = pickedimage
-        let weaudio = new Audio("screams/wega.mp3")
+        let screams = Array("screams/wega.mp3", "screams/scream1.wav","screams/scream2.wav","screams/scream3.wav","screams/scream4.wav","screams/scream5.wav","screams/scream6.wav","screams/scream7.wav")
+        let scream = screams[Math.floor(Math.random() * screams.length)]
+        let weaudio = new Audio(scream)
         if(pickedimage == "wegas/leegee.png"){ weaudio = new Audio("screams/leegee.mp3")}
         count++;
         setCookie("wegas",count)
